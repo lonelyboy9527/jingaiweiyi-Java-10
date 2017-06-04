@@ -30,7 +30,7 @@ public class MyClass1 {
 		 * 			如果要将数据写入目的地，可以使用输出串流。
 		 * 
 		 * 在Java中，输入串流代表的对象为 java.io.InputStream实例
-		 * 			输入串流代表的对象为 java.io.outputStream实例
+		 * 			输出串流代表的对象为 java.io.outputStream实例
 		 * 
 		 * 无论数据源或者目的地为何地，只要设法取得InputStream或outputStream的实例，
 		 * 接下来操作输入与输出的方式都是一致，无须理会来源或目的地真正的形式。
@@ -138,7 +138,7 @@ public class MyClass1 {
 		 * */
 		
 		/* <1>.标准输入/输出*/
-		exp2_1();
+//		exp2_1();
 		
 		/* <2>.FileInputStream 与 FileOutputStream*/
 //		exp2_2();
@@ -151,7 +151,7 @@ public class MyClass1 {
 		 * 
 		 * ByteArrayInputStream是InputStream的子类，可以指定byte数组创建实例。
 		 * 		一旦创建就可将byte数组当作数据源进行读取。
-		 * ByteArrayOutputStream是InputStream的子类，可以指定byte数组创建实例。
+		 * ByteArrayOutputStream是OutStream的子类，可以指定byte数组创建实例。
 		 * 		一旦创建就可将byte数组当作目的地进行写出数据。
 		 * 
 		 * ByteArrayInputStream 主要操作了 InputStream的read()抽象方法，使之可以从byte数组中读取数据。
@@ -187,6 +187,7 @@ public class MyClass1 {
 		 * 将其他输入换成 标准输入：
 		 * 例子： 通过setIn指定System.in 为 FileInputStream，可以读取指定文档并显示在文本模式：
 		 * */ 
+		System.out.println("------> 其他输入换成标准输入:");
 		File inputfp = new File(System.getProperty("user.dir") + "/src/cc/openhome/input.txt");
 		try {
 			InputStream inputStream = new FileInputStream(inputfp);
@@ -201,6 +202,7 @@ public class MyClass1 {
 			// TODO: handle exception
 		}
 		
+		System.out.println("------> 标准输出:");
 		/* 将其他输入换成 标准输入：
 		 * 例子：将上一节中读取的 网页从 标准输出（控制台显示）
 		 * */
@@ -225,6 +227,7 @@ public class MyClass1 {
 	
 	// 串流处理装饰器
 	public static void exp3() {
+		System.out.println("------> 为输入、输出的数据做加工处理，则可以使用打包器类:");
 		/* InputStream 、OutputStream提供串流的基本操作
 		 * 
 		 * 如果想要为输入、输出的数据做加工处理，则可以使用打包器类。
@@ -249,7 +252,7 @@ public class MyClass1 {
 		 * */
 		
 		/* <1>.BufferedInputStream与 BufferedOutputStream*/
-		exp3_1();
+//		exp3_1();
 		
 		/* <2>.DataInputStream与 DataOutputStream
 		 * 
@@ -264,6 +267,7 @@ public class MyClass1 {
 		exp3_3();
 	}
 	public static void exp3_3() {
+		System.out.println("------> <3>.ObjectInputStream与 ObjectOutputStream");
 		/* <3>.ObjectInputStream与 ObjectOutputStream
 		 * 
 		 * 前面的例子是取得 Member的number，name，age数据进行储存读回时也是先取得number，name，age数据再创建 Member实例。
@@ -307,6 +311,7 @@ public class MyClass1 {
 		
 	}
 	public static void exp3_2() {
+		System.out.println("------> <2>.DataInputStream与 DataOutputStream:");
 		/* <2>.DataInputStream与 DataOutputStream
 		 * 
 		 * DataInputStream与 DataOutputStream提供读取、写入Java基本类型数据的方法，

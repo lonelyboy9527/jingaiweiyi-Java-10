@@ -80,6 +80,7 @@ public class MyClass2 {
 	
 	// 字符处理装饰器
 	public static void exp2() {
+		System.out.println("------> 字符处理装饰器:");
 		/* 如同InputStream、OutputStream有一些装饰器类，可以对InputStream、OutputStream打包器增加额外功能
 		 * 
 		 * Reader、 writer也有一些装饰器类可供使用；
@@ -93,7 +94,7 @@ public class MyClass2 {
 		
 		/* <3>.PrintWriter与 PrintStream使用极为相似
 		 * 
-		 * 不过除了客队OutStream打包外，PrintWriter还可以对Writer进行打包
+		 * 不过除了可对 OutStream打包外，PrintWriter还可以对Writer进行打包
 		 * 提供 print()、println()、format()等方法。
 		 * */
 	}
@@ -123,6 +124,7 @@ public class MyClass2 {
 	}
 	
 	public static void exp2_1() {
+		System.out.println("------> InputStreamReader与 OutputStreamWriter:");
 		/*<1>.InputStreamReader与 OutputStreamWriter
 		 * 
 		 * 如果串流处理的字节数据，实际上代表某些字符的编码数据，

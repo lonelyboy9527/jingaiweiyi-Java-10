@@ -16,7 +16,7 @@ public class Main {
 		 * 所幸Java SE API已提供相关输入输出字符处理类，让我们不用亲自处理字节与字符编码转换的枯燥工作。
 		 * */
 		
-//		MyClass2.exp1(); // 10.2.1 Reader 与 Writer继承架构
+		MyClass2.exp1(); // 10.2.1 Reader 与 Writer继承架构
 		MyClass2.exp2(); // 10.2.2 字符处理装饰器
 	}
 	/* ********************10.1 InputStream与OutputStream******************** */
@@ -30,8 +30,8 @@ public class Main {
 		 * 网络输入输出、
 		 * 数据库输入输出等都可用一致的操作处理。
 		 * */
-//		MyClass1.exp1(); // 10.1.1 串流设计的概念
-//		MyClass1.exp2(); // 10.1.2 串流继承架构
+		MyClass1.exp1(); // 10.1.1 串流设计的概念
+		MyClass1.exp2(); // 10.1.2 串流继承架构
 		MyClass1.exp3(); // 10.1.3 串流处理装饰器
 	}
 
